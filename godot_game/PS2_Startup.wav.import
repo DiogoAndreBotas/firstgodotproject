@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PS2_Startup.wav-21f99f72d53db3e01439944646999fe2.sample"
+
+[deps]
+
+source_file="res://PS2_Startup.wav"
+source_md5="301c13147b871f4abc68c0c6e5ce6630"
+
+dest_files=[ "res://.import/PS2_Startup.wav-21f99f72d53db3e01439944646999fe2.sample" ]
+dest_md5="ffb423da67e0ba7077cc7c52a65b7814"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

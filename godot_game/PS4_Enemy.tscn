@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PS4_Enemy_Sprite.png" type="Texture" id=1]
+
+[node name="PS4_Mob" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="PS4" type="Sprite" parent="KinematicBody2D" index="0"]
+
+position = Vector2( 0.0450134, -0.503372 )
+scale = Vector2( 0.209147, 0.229944 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -23.9389, 55.2077, 73.7681, 24.4721, 68.2681, -1.73412, 16.1792, -54.1465, -74.4101, -28.2638, -69.2335, -3.67532 )
+
+

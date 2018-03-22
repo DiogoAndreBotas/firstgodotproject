@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cowboy Whistle Music (Born Unto Trouble) - Red Dead Redemption [HD].wav-8b20b6c34603a6996dde49286a73293f.sample"
+
+[deps]
+
+source_file="res://Cowboy Whistle Music (Born Unto Trouble) - Red Dead Redemption [HD].wav"
+source_md5="a11f56d43c2abb8c3a7704e3f7b06745"
+
+dest_files=[ "res://.import/Cowboy Whistle Music (Born Unto Trouble) - Red Dead Redemption [HD].wav-8b20b6c34603a6996dde49286a73293f.sample" ]
+dest_md5="451ba308943435c5a9c5b562ad2ab99a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

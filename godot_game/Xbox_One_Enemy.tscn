@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Xbox_One_Enemy_Sprite.png" type="Texture" id=1]
+
+[node name="Xbox_One_Mob" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D" index="0"]
+
+position = Vector2( 1.31476, 0.930153 )
+scale = Vector2( 0.324782, 0.361871 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -60.1682, 48.1491, -55.2914, 52.0505, 72.9669, 36.9325, 72.9669, 32.5435, 79.7944, 31.0805, 81.7451, 2.30766, 40.7804, -28.9035, -75.2861, -23.0514, -74.3107, 9.13511 )
+
+

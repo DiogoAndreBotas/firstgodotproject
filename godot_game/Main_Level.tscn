@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main_Level.gd" type="Script" id=1]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://1st_Level.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PS4_Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Xbox_One_Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio.tscn" type="PackedScene" id=6]
+
+[node name="Main" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+kill_score = 50
+
+[node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="1st_Level_Tile" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="Kill_Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="PS4_Mob" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 870.883, 381.03 )
+scale = Vector2( 0.659301, 0.659301 )
+
+[node name="Xbox_One_Mob" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 867.474, 81.1166 )
+scale = Vector2( 0.588298, 0.588298 )
+
+[node name="Audio" parent="." index="5" instance=ExtResource( 6 )]
+
+[connection signal="timeout" from="Kill_Timer" to="." method="kill_timer_timeout"]
+
+
