@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sand.jpg-07069c70feeb870e52cf503a4f92e6b1.stex"
+path="res://.import/PS4.png-0687629b77cb035c8df154cff1ca9c49.stex"
 
 [deps]
 
-source_file="res://Sand.jpg"
-source_md5="712adb7ede698692db3b13c8df445bf1"
+source_file="res://PS4.png"
+source_md5="1d2e6fc7aa2cb96dbbda4eeb8b809dc4"
 
-dest_files=[ "res://.import/Sand.jpg-07069c70feeb870e52cf503a4f92e6b1.stex" ]
-dest_md5="3eabb5605b94c09b99870b41996df9f0"
+dest_files=[ "res://.import/PS4.png-0687629b77cb035c8df154cff1ca9c49.stex" ]
+dest_md5="95ee79ecc6f6d017f96e89d579ff7c4a"
 
 [params]
 

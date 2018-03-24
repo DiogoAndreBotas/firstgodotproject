@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sand-3.jpg-d410dff289d7f21bcf786e06be36ce16.stex"
+path="res://.import/Sand.png-28cf867e7fe759604d79b26d67abc93a.stex"
 
 [deps]
 
-source_file="res://Sand-3.jpg"
-source_md5="406b42ca90d412b121e2d428722afc56"
+source_file="res://Sand.png"
+source_md5="b87d1edc3c108ddb59a68d2f3ac6f89b"
 
-dest_files=[ "res://.import/Sand-3.jpg-d410dff289d7f21bcf786e06be36ce16.stex" ]
-dest_md5="b2f24d8516475373992d9b1ece8b8d87"
+dest_files=[ "res://.import/Sand.png-28cf867e7fe759604d79b26d67abc93a.stex" ]
+dest_md5="d82a6c0d1ed87345a8a977a46f857480"
 
 [params]
 
