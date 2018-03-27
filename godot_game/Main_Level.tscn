@@ -14,7 +14,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 0, 595.014, 0, 0, 0, 0, 3.3241, -1.10803, 0, 0, 0, 0, -1038.23, -3.3241, 0, 0, 0, 0, -1036.01, 593.906, 0, 0, 0, 0, 0, 595.014 )
 }
 
-[node name="Main" type="Node2D" index="0"]
+[node name="Main" type="Node2D"]
 
 script = ExtResource( 1 )
 enemy = ExtResource( 2 )
@@ -23,6 +23,8 @@ kill_score = 50
 [node name="HUD" parent="." index="0" instance=ExtResource( 3 )]
 
 [node name="1st_Level_Tile" parent="." index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 0.119629, 0 )
 
 [node name="Kill_Timer" type="Timer" parent="." index="2"]
 
@@ -68,7 +70,7 @@ lookahead = 4.0
 
 [node name="Position2D" type="Position2D" parent="." index="8"]
 
-position = Vector2( 74.216, 262.604 )
+position = Vector2( 102.924, 572.237 )
 scale = Vector2( 0.997783, 1 )
 
 [connection signal="timeout" from="Kill_Timer" to="." method="kill_timer_timeout"]

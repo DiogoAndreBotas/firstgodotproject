@@ -3,15 +3,16 @@
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Cowboi.png" type="Texture" id=2]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
-position = Vector2( 5.83978, 7.00774 )
+position = Vector2( 10.06, 13.4331 )
+scale = Vector2( 1.91291, 1.91291 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-SPEED = 200
+SPEED = 330
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

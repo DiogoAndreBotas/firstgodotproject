@@ -5,17 +5,17 @@
 [sub_resource type="StreamTexture" id=1]
 
 flags = 4
-load_path = "res://.import/Sand.jpg-07069c70feeb870e52cf503a4f92e6b1.stex"
+load_path = ""
 
 [sub_resource type="StreamTexture" id=2]
 
 flags = 4
-load_path = "res://.import/Sand-2.jpg-70908ee95de8eba18fe224aaa08dd834.stex"
+load_path = ""
 
 [sub_resource type="StreamTexture" id=3]
 
 flags = 4
-load_path = "res://.import/Sand-3.jpg-d410dff289d7f21bcf786e06be36ce16.stex"
+load_path = ""
 
 [sub_resource type="StreamTexture" id=4]
 

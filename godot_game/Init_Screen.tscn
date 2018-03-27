@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Panel.gd" type="Script" id=1]
-[ext_resource path="res://arizona-sunset.jpg" type="Texture" id=2]
+[ext_resource path="res://maxresdefault.png" type="Texture" id=2]
 [ext_resource path="res://atomicage-regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://The-Good-the-Bad-and-the-Ugly.wav" type="AudioStream" id=4]
 
@@ -10,7 +10,7 @@
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 45
+size = 60
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -18,7 +18,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
 
-size = 50
+size = 70
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -26,13 +26,15 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=4]
 
-size = 30
+size = 60
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Node2D" type="Node2D"]
+
+position = Vector2( -1, 0 )
 
 [node name="Panel" type="Panel" parent="." index="0"]
 
@@ -41,8 +43,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 1.0
-margin_right = 1025.0
-margin_bottom = 601.0
+margin_right = 1921.0
+margin_bottom = 1080.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -55,14 +57,14 @@ _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="TextureRect" type="TextureRect" parent="Panel" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -3.0
-margin_top = -33.0
-margin_right = 1021.0
-margin_bottom = 631.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -79,9 +81,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 645.0
-margin_right = 895.0
-margin_bottom = 189.0
+margin_left = 1335.0
+margin_top = 135.0
+margin_right = 1633.0
+margin_bottom = 387.0
 rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -90,7 +93,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.0234375, 0.0233016, 0.0229797, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "A Cowboy
 In...
 "
@@ -107,10 +110,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 660.0
-margin_top = 166.0
-margin_right = 1013.0
-margin_bottom = 362.0
+margin_left = 1338.0
+margin_top = 416.0
+margin_right = 1775.0
+margin_bottom = 612.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -118,7 +121,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Console
 Termination"
 align = 1
@@ -131,14 +134,14 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 [node name="Title_3" type="Label" parent="Panel" index="3"]
 
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = 277.0
-margin_right = 1062.0
-margin_bottom = 529.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -510.0
+margin_top = -358.0
+margin_right = 510.0
+margin_bottom = -106.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -146,13 +149,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press 'Enter' to Begin...."
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Fade_in_Timer" type="Timer" parent="Panel" index="4"]
 
