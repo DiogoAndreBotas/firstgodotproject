@@ -7,10 +7,10 @@ path="res://.import/Pew.wav-e0604d8372baef34d80e46f0dc2044a3.sample"
 [deps]
 
 source_file="res://Pew.wav"
-source_md5="0a3e5e9e636de1c78b9dd3a7adbb4c78"
+source_md5="3f0177922ea5dc373ef9b9eade62fb14"
 
 dest_files=[ "res://.import/Pew.wav-e0604d8372baef34d80e46f0dc2044a3.sample" ]
-dest_md5="43518d213b8fb8f908954c10bc2b62a5"
+dest_md5="717d541a86e5ec7a727c98a5659159bd"
 
 [params]
 

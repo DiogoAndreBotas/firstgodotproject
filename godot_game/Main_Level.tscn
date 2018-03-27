@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main_Level.gd" type="Script" id=1]
-[ext_resource path="res://PS4_Enemy.tscn" type="PackedScene" id=2]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
-[ext_resource path="res://1st_Level.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Audio.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://1st_Level.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -14,15 +13,15 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 0, 595.014, 0, 0, 0, 0, 3.3241, -1.10803, 0, 0, 0, 0, -1038.23, -3.3241, 0, 0, 0, 0, -1036.01, 593.906, 0, 0, 0, 0, 0, 595.014 )
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-enemy = ExtResource( 2 )
+enemy = null
 kill_score = 50
 
-[node name="HUD" parent="." index="0" instance=ExtResource( 3 )]
+[node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="1st_Level_Tile" parent="." index="1" instance=ExtResource( 4 )]
+[node name="1st_Level_Tile" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 0.119629, 0 )
 
@@ -47,7 +46,7 @@ wait_time = 2.0
 one_shot = true
 autostart = true
 
-[node name="Audio" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Audio" parent="." index="5" instance=ExtResource( 4 )]
 
 [node name="Enemy_Path" type="Path2D" parent="." index="6"]
 
@@ -66,7 +65,7 @@ cubic_interp = true
 loop = true
 lookahead = 4.0
 
-[node name="Player" parent="." index="7" instance=ExtResource( 6 )]
+[node name="Player" parent="." index="7" instance=ExtResource( 5 )]
 
 [node name="Position2D" type="Position2D" parent="." index="8"]
 

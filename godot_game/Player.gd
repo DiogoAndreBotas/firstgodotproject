@@ -35,9 +35,10 @@ func update_borders():
 	pass
 
 func start(pos):
-    position = pos
-    show()
-    $Collision.disabled = false
+	position = pos
+	show()
+	$Collision.disabled = false
+	pass
 
 func _ready():
 	screensize = get_viewport_rect().size

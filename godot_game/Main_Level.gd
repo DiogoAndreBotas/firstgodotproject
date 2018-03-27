@@ -4,6 +4,7 @@ export (PackedScene) var enemy
 export (int) var kill_score = 50
 var score
 var bullets = 6
+var ev
 
 func _ready():
 	score = 0
@@ -20,7 +21,7 @@ func _process(delta):
 		bullets = 6
 		$HUD.update_ammo(bullets)
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		$Audio/Shooting.play(0)
+#		$Audio/Shooting.play(0)
 		$Kill_Timer.start()
 #		if(bullets != 0):
 #			bullets = bullets - 1
@@ -43,4 +44,9 @@ func _on_Enemy_Timer_timeout():
 
 func _on_Start_Timer_timeout():
 	$Enemy_Timer.start()
+	pass
+
+
+func shooting_sound_player(viewport, event, shape_idx):
+	$Audio/Shooting.play(0)
 	pass
