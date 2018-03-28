@@ -25,30 +25,23 @@ kill_score = 50
 
 position = Vector2( 0.119629, 0 )
 
-[node name="Kill_Timer" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = true
-autostart = false
-
-[node name="Enemy_Timer" type="Timer" parent="." index="3"]
+[node name="Enemy_Timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = false
 
-[node name="Start_Timer" type="Timer" parent="." index="4"]
+[node name="Start_Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = true
 
-[node name="Audio" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Audio" parent="." index="4" instance=ExtResource( 4 )]
 
-[node name="Enemy_Path" type="Path2D" parent="." index="6"]
+[node name="Enemy_Path" type="Path2D" parent="." index="5"]
 
 position = Vector2( 1039.32, 3.36842 )
 curve = SubResource( 1 )
@@ -65,14 +58,14 @@ cubic_interp = true
 loop = true
 lookahead = 4.0
 
-[node name="Player" parent="." index="7" instance=ExtResource( 5 )]
+[node name="Player" parent="." index="6" instance=ExtResource( 5 )]
 
-[node name="Position2D" type="Position2D" parent="." index="8"]
+position = Vector2( 16.8762, 11.161 )
+
+[node name="Position2D" type="Position2D" parent="." index="7"]
 
 position = Vector2( 102.924, 572.237 )
 scale = Vector2( 0.997783, 1 )
-
-[connection signal="timeout" from="Kill_Timer" to="." method="kill_timer_timeout"]
 
 [connection signal="timeout" from="Enemy_Timer" to="." method="_on_Enemy_Timer_timeout"]
 

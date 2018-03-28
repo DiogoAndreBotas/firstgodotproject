@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/177863__dredile__clean-revolver-reload.wav-89b2378ac25e0e3e890f6bdd121cd4c3.sample"
+
+[deps]
+
+source_file="res://177863__dredile__clean-revolver-reload.wav"
+source_md5="5cb4f5fa7c62541f354344268f72f94a"
+
+dest_files=[ "res://.import/177863__dredile__clean-revolver-reload.wav-89b2378ac25e0e3e890f6bdd121cd4c3.sample" ]
+dest_md5="7e089780aa2350e2a23dccc1fc56db86"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
