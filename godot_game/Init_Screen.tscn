@@ -3,7 +3,7 @@
 [ext_resource path="res://Panel.gd" type="Script" id=1]
 [ext_resource path="res://maxresdefault.png" type="Texture" id=2]
 [ext_resource path="res://atomicage-regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://The-Good-the-Bad-and-the-Ugly.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Theme" id=1]
 
@@ -32,7 +32,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( -1, 0 )
 
@@ -160,14 +160,8 @@ wait_time = 4.75
 one_shot = true
 autostart = true
 
-[node name="Menu Song" type="AudioStreamPlayer2D" parent="." index="1"]
+[node name="Audio" parent="Panel" index="5" instance=ExtResource( 4 )]
 
-stream = ExtResource( 4 )
-volume_db = 0.0
-autoplay = true
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
+position = Vector2( -1, 0 )
 
 

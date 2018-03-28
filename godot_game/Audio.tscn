@@ -1,23 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Cowboy Whistle Music (Born Unto Trouble) - Red Dead Redemption [HD].wav" type="AudioStream" id=1]
-[ext_resource path="res://Pew.wav" type="AudioStream" id=2]
-[ext_resource path="res://PS2_Startup.wav" type="AudioStream" id=3]
-[ext_resource path="res://177863__dredile__clean-revolver-reload.wav" type="AudioStream" id=4]
+[ext_resource path="res://The-Good-the-Bad-and-the-Ugly.wav" type="AudioStream" id=2]
+[ext_resource path="res://Pew.wav" type="AudioStream" id=3]
+[ext_resource path="res://PS2_Startup.wav" type="AudioStream" id=4]
+[ext_resource path="res://reload_sound.wav" type="AudioStream" id=5]
 
-[node name="Audio" type="Node2D"]
+[node name="Audio" type="Node2D" index="0"]
 
 [node name="Ambient" type="AudioStreamPlayer2D" parent="." index="0"]
 
 stream = ExtResource( 1 )
 volume_db = 0.0
-autoplay = true
+autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Shooting" type="AudioStreamPlayer2D" parent="." index="1"]
+[node name="init_screen_music" type="AudioStreamPlayer2D" parent="." index="1"]
 
 stream = ExtResource( 2 )
 volume_db = 0.0
@@ -27,7 +28,7 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Enemy_Hit" type="AudioStreamPlayer2D" parent="." index="2"]
+[node name="Shooting" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
@@ -37,9 +38,19 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="gun_reload" type="AudioStreamPlayer2D" parent="." index="3"]
+[node name="Enemy_Hit" type="AudioStreamPlayer2D" parent="." index="3"]
 
 stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="gun_reload" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 5 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0

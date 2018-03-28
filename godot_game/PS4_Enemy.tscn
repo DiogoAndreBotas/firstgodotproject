@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://RigidBody2D.gd" type="Script" id=1]
-[ext_resource path="res://PS4_Enemy_Sprite.png" type="Texture" id=2]
+[ext_resource path="res://PS4.png" type="Texture" id=2]
 
 [node name="PS4_Mob" type="Node2D"]
 
@@ -31,17 +31,19 @@ MIN_SPEED = 10
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
 
-position = Vector2( -0.402512, -5.98049 )
-scale = Vector2( 0.334423, 0.334423 )
+position = Vector2( 0.0417652, 0.39341 )
+scale = Vector2( 0.415644, 0.415644 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( -117.714, -46.6602, -112.325, -9.5385, -38.0816, 74.2847, 118.787, 30.5769, 110.405, -6.54482, 26.582, -83.1831 )
+polygon = PoolVector2Array( -27.4407, -25.0001, -27.6155, 24.4754, 26.9298, 25.1747, 27.2795, -24.8253 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="RigidBody2D" index="2"]
 
+position = Vector2( -0.0806175, 0.244683 )
+scale = Vector2( 2.71853, 2.54545 )
 rect = Rect2( -10, -10, 20, 20 )
 
 

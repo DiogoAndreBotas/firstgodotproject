@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sand_env.tres" type="TileSet" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 1.22772, 0 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
