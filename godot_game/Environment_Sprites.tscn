@@ -4,7 +4,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sand" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 

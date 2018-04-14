@@ -1,32 +1,65 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main_Level.gd" type="Script" id=1]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
-[ext_resource path="res://1st_Level.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Audio.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://PS4_Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Projectile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://1st_Level.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1.58325, 3.87022, 0, 0, 0, 0, 1910.92, 2.16258, 0, 0, 0, 0, 1917.07, 1119.71, 0, 0, 0, 0, 1.85663, 1115.61, 0, 0, 0, 0, -1.58325, 3.87022 )
+}
 
 [node name="Main" type="Node2D"]
 
 script = ExtResource( 1 )
-enemy = null
+enemy = ExtResource( 2 )
+projectile = ExtResource( 3 )
 kill_score = 50
 
-[node name="HUD" parent="." index="0" instance=ExtResource( 2 )]
+[node name="HUD" parent="." index="0" instance=ExtResource( 4 )]
 
-[node name="1st_Level_Tile" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Tile" parent="." index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 0.119629, 0 )
 
-[node name="Audio" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Audio" parent="." index="2" instance=ExtResource( 6 )]
 
-[node name="Player" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Initial_Position" type="Position2D" parent="." index="3"]
 
-position = Vector2( 16.8762, 11.161 )
+position = Vector2( 107.025, 473.673 )
+scale = Vector2( 0.997783, 0.808704 )
 
-[node name="Position2D" type="Position2D" parent="." index="4"]
+[node name="Player" parent="." index="4" instance=ExtResource( 7 )]
 
-position = Vector2( 102.924, 572.237 )
-scale = Vector2( 0.997783, 1 )
+[node name="Spawn_Timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[node name="Mob_Path" type="Path2D" parent="." index="6"]
+
+curve = SubResource( 1 )
+
+[node name="Spawn_Location" type="PathFollow2D" parent="Mob_Path" index="0"]
+
+position = Vector2( -1.58325, 3.87022 )
+rotation = -0.000892848
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[connection signal="timeout" from="Spawn_Timer" to="." method="_on_Spawn_Timer_timeout"]
 
 

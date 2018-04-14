@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export (int) var SPEED
+
 var vector = Vector2()
 var screensize
 
@@ -33,12 +34,12 @@ func update_borders():
 	position.y = clamp(position.y, 0, screensize.y)
 	pass
 
+func _ready():
+	screensize = get_viewport_rect().size
+	pass
+
 func start(pos):
 	position = pos
 	show()
 	$Collision.disabled = false
-	pass
-
-func _ready():
-	screensize = get_viewport_rect().size
 	pass
