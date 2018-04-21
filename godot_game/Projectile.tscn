@@ -3,7 +3,7 @@
 [ext_resource path="res://Projectile.gd" type="Script" id=1]
 [ext_resource path="res://BulletIcon.png" type="Texture" id=2]
 
-[node name="Projectile" type="RigidBody2D"]
+[node name="Projectile" type="RigidBody2D" index="0"]
 
 position = Vector2( 5.03815, -0.0110931 )
 input_pickable = true
@@ -13,7 +13,7 @@ mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 1.0
+gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -25,6 +25,7 @@ linear_damp = 0.1
 angular_velocity = 0.0
 angular_damp = 1.0
 script = ExtResource( 1 )
+SPEED = 500
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -39,5 +40,16 @@ position = Vector2( -2.55161, 1.50777 )
 rotation = 1.5709
 build_mode = 0
 polygon = PoolVector2Array( -1.96657, -25.2464, -3.35836, -22.9268, -4.17023, -18.4034, -4.17023, -12.9523, -4.17023, -7.38513, -5.79398, -3.09379, -6.37389, 0.965588, -5.56202, 8.27247, -6.14193, 13.4917, -6.48988, 19.9867, -6.60586, 24.0461, -5.678, 25.0899, 4.18049, 24.8579, 4.29647, -3.32576, 2.20879, -6.45728, 2.32478, -18.6354, 0.353073, -24.7825 )
+
+[node name="Collision_Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]
+
+[connection signal="timeout" from="Collision_Timer" to="." method="_on_Collision_Timer_timeout"]
 
 

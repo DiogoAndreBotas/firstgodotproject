@@ -1,19 +1,19 @@
 extends CanvasLayer
 
+signal reload
+
 func _ready():
 	$Score.hide()
 	pass
 
-func update_score(score):
+func score_timer_timeout():
+	$Score.hide()
+	pass
+
+
+func update_score_ammo(score, ammo):
 	$Score.text = "Score: " + str(score)
 	$Score.show()
 	$Score_Timer.start()
-	pass
-
-func update_ammo(ammo):
 	$Ammo_Counter.text = "Ammo: " + str(ammo)
-	pass
-
-func score_timer_timeout():
-	$Score.hide()
 	pass

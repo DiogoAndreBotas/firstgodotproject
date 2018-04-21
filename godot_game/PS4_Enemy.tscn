@@ -3,7 +3,7 @@
 [ext_resource path="res://PS4_Enemy.gd" type="Script" id=1]
 [ext_resource path="res://PS4.png" type="Texture" id=2]
 
-[node name="PS4_Mob" type="RigidBody2D" index="0"]
+[node name="PS4_Mob" type="RigidBody2D"]
 
 position = Vector2( -0.642555, -0.385538 )
 input_pickable = false

@@ -26,7 +26,7 @@ func _process(delta):
 		vector.y = 0
 		update_borders()
 		move_and_slide(vector)
-	$Sprite.look_at(get_global_mouse_position())
+	look_at(get_global_mouse_position())
 	pass
 
 func update_borders():

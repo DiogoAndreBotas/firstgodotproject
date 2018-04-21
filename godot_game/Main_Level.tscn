@@ -20,7 +20,8 @@ _data = {
 script = ExtResource( 1 )
 enemy = ExtResource( 2 )
 projectile = ExtResource( 3 )
-kill_score = 50
+KILL_SCORE = 50
+BULLET_NUMBER = null
 
 [node name="HUD" parent="." index="0" instance=ExtResource( 4 )]
 
@@ -51,7 +52,7 @@ curve = SubResource( 1 )
 [node name="Spawn_Location" type="PathFollow2D" parent="Mob_Path" index="0"]
 
 position = Vector2( -1.58325, 3.87022 )
-rotation = -0.000892848
+rotation = -0.000892725
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0

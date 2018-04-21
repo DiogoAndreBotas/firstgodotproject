@@ -2,7 +2,8 @@ extends Node2D
 
 export (PackedScene) var enemy
 export (PackedScene) var projectile
-export (int) var kill_score = 50
+export (int) var KILL_SCORE = 50
+export (int) var BULLET_NUMBER
 var score
 var bullets = 12
 
@@ -14,25 +15,22 @@ func _ready():
 
 func _input(event):
 	if(event.is_action_pressed("left_mouse_click")):
-		
 		if(bullets != 0):
-			$Audio/Shooting.play(0)
+			if(bullets != BULLET_NUMBER):
+				$Audio/Shooting.play(0)
 			
 			var proj = projectile.instance()
 			add_child(proj)
-			proj.position = $Player.global_position
-			proj.look_at(get_global_mouse_position())
+			proj._shoot($Player.global_position)
 			
-			score += kill_score
-			$HUD.update_score(score)
-			if(bullets != 0):
-				bullets = bullets - 1
-				$HUD.update_ammo(bullets)
-				
+			
+			score += KILL_SCORE
+			bullets = bullets - 1
+			$HUD.update_score_ammo(score, bullets)
 	if(event.is_action_pressed("reload_key")):
 		$Audio/gun_reload.play(0)
 		bullets = 12
-		$HUD.update_ammo(bullets)
+		$HUD.update_score_ammo(score, bullets)
 	if(event.is_action_pressed("options")):
 		get_tree().change_scene("Options_Screen.tscn")
 	pass
