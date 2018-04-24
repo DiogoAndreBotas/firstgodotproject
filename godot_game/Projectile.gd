@@ -2,10 +2,6 @@ extends RigidBody2D
 
 export (int) var SPEED = 500
 
-func _ready():
-	$Collision.disabled = true
-	pass
-
 func _shoot(start_pos):
 	global_position = start_pos
 	look_at(get_global_mouse_position())
@@ -13,6 +9,11 @@ func _shoot(start_pos):
 	linear_velocity = direction * SPEED
 	pass
 
-func _on_Collision_Timer_timeout():
-	$Collision.disabled = false
+func _on_Projectile_body_entered(body):
+	if(body.get_name() == "PS4_Mob"):
+		queue_free()
+	pass
+
+func _on_Visibility_screen_exited():
+	queue_free()
 	pass

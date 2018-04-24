@@ -23,14 +23,15 @@ func _input(event):
 			add_child(proj)
 			proj._shoot($Player.global_position)
 			
-			
 			score += KILL_SCORE
 			bullets = bullets - 1
-			$HUD.update_score_ammo(score, bullets)
+			$HUD.update_ammo(bullets)
+			$HUD.update_score(score)
 	if(event.is_action_pressed("reload_key")):
 		$Audio/gun_reload.play(0)
 		bullets = 12
-		$HUD.update_score_ammo(score, bullets)
+		$HUD.update_ammo(bullets)
+		$HUD.update_score(score)
 	if(event.is_action_pressed("options")):
 		get_tree().change_scene("Options_Screen.tscn")
 	pass

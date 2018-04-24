@@ -1,31 +1,37 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Projectile.gd" type="Script" id=1]
 [ext_resource path="res://BulletIcon.png" type="Texture" id=2]
 
-[node name="Projectile" type="RigidBody2D" index="0"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Projectile" type="RigidBody2D"]
 
 position = Vector2( 5.03815, -0.0110931 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 2
 mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 0.0
+gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
-contact_monitor = false
+contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 0.1
+linear_damp = -1.0
 angular_velocity = 0.0
-angular_damp = 1.0
+angular_damp = -1.0
 script = ExtResource( 1 )
-SPEED = 500
+_sections_unfolded = [ "Collision" ]
+SPEED = 1000
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -34,22 +40,19 @@ rotation = 1.5746
 scale = Vector2( 0.970306, 0.970306 )
 texture = ExtResource( 2 )
 
-[node name="Collision" type="CollisionPolygon2D" parent="." index="1"]
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -2.55161, 1.50777 )
+position = Vector2( -2.27653, 0.817624 )
 rotation = 1.5709
-build_mode = 0
-polygon = PoolVector2Array( -1.96657, -25.2464, -3.35836, -22.9268, -4.17023, -18.4034, -4.17023, -12.9523, -4.17023, -7.38513, -5.79398, -3.09379, -6.37389, 0.965588, -5.56202, 8.27247, -6.14193, 13.4917, -6.48988, 19.9867, -6.60586, 24.0461, -5.678, 25.0899, 4.18049, 24.8579, 4.29647, -3.32576, 2.20879, -6.45728, 2.32478, -18.6354, 0.353073, -24.7825 )
+scale = Vector2( 0.761461, 2.63442 )
+shape = SubResource( 1 )
 
-[node name="Collision_Timer" type="Timer" parent="." index="2"]
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="2"]
 
-process_mode = 1
-wait_time = 0.2
-one_shot = true
-autostart = true
+rect = Rect2( -10, -10, 20, 20 )
 
 [connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]
 
-[connection signal="timeout" from="Collision_Timer" to="." method="_on_Collision_Timer_timeout"]
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]
 
 
